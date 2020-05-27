@@ -13,19 +13,19 @@
 ```terminal:Fizz Buzz
 1
 2
-fizz
+Fizz
 4
-buzz
-fizz
+Buzz
+Fizz
 7
 8
-fizz
-buzz
+Fizz
+Buzz
 11
-fizz
+Fizz
 13
 14
-fizzbuzz
+FizzBuzz
 16
 .
 .
@@ -46,7 +46,7 @@ fizzbuzz
 - `Enum` をつかう
 
   ```elixir:terminal(IEx)
-  iex> 1..15 |> Enum.each(&(&1) |> IO.puts)
+  iex> 1..15 |> Enum.each(&IO.puts/1)
   1
   2
   3
@@ -56,6 +56,7 @@ fizzbuzz
   :ok
   ```
 
+  - `1..15 |> Enum.each(&(&1) |> IO.puts)` も同じ
   - `1..15 |> Enum.each(fn n -> IO.puts n end)` でも可
 
 - `for`でリストをつくる
